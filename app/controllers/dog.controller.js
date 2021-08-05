@@ -32,7 +32,7 @@ exports.create = (req, res) => {
 // Retrieve all Dogs from the database.
 exports.findAll = (req, res) => {
   const name = req.query.name;
-  const condition = name ? { title: { $regex: new RegExp(name), $options: 'i' } } : {};
+  const condition = name ? { name: { $regex: new RegExp(name), $options: 'i' } } : {};
 
   Dog.find(condition)
     .then(data => {
