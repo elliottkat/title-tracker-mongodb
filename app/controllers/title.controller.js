@@ -1,5 +1,5 @@
 const db = require('../models');
-const Title = db.title;
+const Title = db.titles;
 
 // Create and Save a new Title
 exports.create = (req, res) => {
